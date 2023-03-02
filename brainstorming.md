@@ -19,4 +19,8 @@ Part 2)
     Javascript does not have an fgets() similalr to C, also I did not want to try and reinvent the wheel. 
 
 Part 3)
-    I do not have any experience coding front end applications.
+    I do not have any experience coding front end applications, although to make the interface more aesthetically pleasing I would move the
+    temerpatuer value to the centre of the page, making that the focal point while putting the text below the number instead.
+    I believe the minimal design is key and not too distracting. Apart form the design specificaiton to make the temperatures outside the 
+    randge red, I beleive values which are inside the range should be green, and to indicate any trends and if values are approaching boundary
+    values close to 80 and 2 degrees, the number should be displayed in yellow or orange.
