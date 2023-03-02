@@ -18,14 +18,13 @@ tcpServer.on('connection', (socket) => {
         // HINT: what happens if the JSON in the received message is formatted incorrectly?
         // HINT: see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
         try {
-            console.log(msg.toString());
+            // console.log(msg.toString());
             let ReceivedMsg = msg.toString(); //making the buffer into a string
             // console.log("This is the sliced string"+msg.toString().slice(0,-1));
             if(ReceivedMsg.endsWith("}}")) { //checking the format of the JSON
                 let NewMsg = ReceivedMsg.slice(0,-1); // slicing last bracket to fix JSON syntax
                 ReceivedMsg = NewMsg //storing the correct msg JSON syntax into the message
             }
-
             let currJSON = JSON.parse(ReceivedMsg); //parsing the received messsage
 
             if ((currJSON.battery_temperature > 80) || (currJSON.battery_temperature < 20)) {
